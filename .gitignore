@@ -1,0 +1,5 @@
+node_modules
+db.json
+bower_components
+tmp
+npm-debug.log

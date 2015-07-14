@@ -1,0 +1,11 @@
+<p>On est dans la préparation de la partie</p>
+
+<table class="battlefieldTab">
+	<tr ng-repeat="r in prepareGame.rows track by $index">
+		<td ng-repeat="c in prepareGame.cols track by $index" ng-click="prepareGame.setCase($parent.$index, $index)">
+			{{ prepareGame.battlefield[$parent.$index][$index] }}
+		</td>
+	</tr>
+</table>
+
+<button ng-show="prepareGame.gameReady()" ng-click="prepareGame.save()">Sauver</button>

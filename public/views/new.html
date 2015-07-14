@@ -1,0 +1,21 @@
+<form name="battleshipForm" ng-submit="newGame.addGame(battleshipForm)" novalidate>
+	<p>
+		<label>Nom: </label>
+		<input name="name" type="text" ng-model="newGame.game.name" required>
+		<span class="error" ng-show="battleshipForm.name.$invalid && battleshipForm.$dirty" ng.hide="battleshipForm.name.$valid || battleshipForm.$pristine">Le nom est obligatoire</span>
+	</p>
+	<p>
+		<label>Email: </label>
+		<input name="email" type="email" ng-model="newGame.game.user1.email">
+	</p>
+	<p>
+		<label>Champ de bataille: </label>
+		<input name="battlefieldSizeWidth" type="number" ng-model="newGame.game.battlefieldSize.width" min="1" max="10">
+		<input name="battlefieldSizeHeight" type="number" ng-model="newGame.game.battlefieldSize.height" min="1" max="10">
+	</p>
+	<p>
+		<label>Nombre de bateaux: </label>
+		<select name="fleetSize" ng-model="newGame.game.fleetSize" ng-options="nb.value as nb.label for nb in newGame.ships"></select>
+	</p>
+	<input type="submit" value="Créer un jeu">
+</form>

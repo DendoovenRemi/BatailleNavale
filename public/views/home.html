@@ -1,0 +1,29 @@
+<table class="gameListTab">
+	<caption>Liste des parties</caption>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nom de la partie</th>
+			<th>Pseudo J1</th>
+			<th>Pseudo J2</th>
+			<th>Champ de bataille</th>
+			<th>Nombre de bateaux</th>
+			<th>Rejoindre</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="g in home.games">
+			<td>{{ g.id }}</td>
+			<td>{{ g.name }}</td>
+			<td>{{ g.user1.pseudo }}</td>
+			<td>{{ g.user2.pseudo }}</td>
+			<td>{{ g.battlefieldSize.width }} - {{ g.battlefieldSize.height }}</td>
+			<td>{{ g.fleetSize }}</td>
+			<td>
+				<button ng-if="!g.user2" ng-click="home.joinGame(g)">Rejoindre la partie</button>
+				<button ng-if="g.user2" ng-click="home.prepareGame(g)">Jouer</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<button ng-click=home.fetchGames()>Refresh</button>

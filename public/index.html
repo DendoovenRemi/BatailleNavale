@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<meta charset="UTF-8">
+	<title>Bataille Navale</title>
+</head>
+<body ng-app="battleship">
+	<h1>Bataille navale</h1>
+	<ul>
+		<li><a href="#/">Accueil</a></li>
+		<li><a href="#/new">Nouvelle partie</a></li>
+	</ul>		
+	<div ng-view></div>
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<!-- <script src="lib/jquery.js"></script> -->			<!-- angular ui au lieu de bootstrap -->
+	<!-- <script src="lib/bootstrap.js"></script> -->
+	<script src="app/app.js"></script>
+	<script src="app/controllers/HomeController.js"></script>
+	<script src="app/controllers/NewGameController.js"></script>
+	<script src="app/controllers/PrepareGameController.js"></script>
+	<script src="app/services/GameService.js"></script>
+	<script src="app/directives/dtaPhoto.js"></script>
+</body>
+</html>

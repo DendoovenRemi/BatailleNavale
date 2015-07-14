@@ -1,0 +1,54 @@
+h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
+}
+
+.gameListTab {
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-collapse: collapse;
+}
+
+.gameListTab thead {
+	background-color: #DCDCDC;
+}
+
+.gameListTab th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	text-transform: uppercase;
+}
+
+.gameListTab td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+.battlefieldTab{
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-collapse: collapse;
+	margin: 30px;
+}
+
+.battlefieldTab td{
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+input.ng-invalid {
+	background-color: pink;
+}
+
+.error {
+	color: red;
+}
